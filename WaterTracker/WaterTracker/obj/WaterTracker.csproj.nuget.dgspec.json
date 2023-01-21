@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/tobyodonoghue/Documents/GitHub/NWGHack/WaterTracker/WaterTracker/WaterTracker.csproj": {}
+  },
+  "projects": {
+    "/Users/tobyodonoghue/Documents/GitHub/NWGHack/WaterTracker/WaterTracker/WaterTracker.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/tobyodonoghue/Documents/GitHub/NWGHack/WaterTracker/WaterTracker/WaterTracker.csproj",
+        "projectName": "WaterTracker",
+        "projectPath": "/Users/tobyodonoghue/Documents/GitHub/NWGHack/WaterTracker/WaterTracker/WaterTracker.csproj",
+        "packagesPath": "/Users/tobyodonoghue/.nuget/packages/",
+        "outputPath": "/Users/tobyodonoghue/Documents/GitHub/NWGHack/WaterTracker/WaterTracker/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/tobyodonoghue/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "monoandroid13.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "monoandroid13.0": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "monoandroid13.0": {
+          "dependencies": {
+            "Xamarin.AndroidX.AppCompat": {
+              "target": "Package",
+              "version": "[1.2.0.5, )"
+            },
+            "Xamarin.Essentials": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
+            "Xamarin.Google.Android.Material": {
+              "target": "Package",
+              "version": "[1.0.0.1, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

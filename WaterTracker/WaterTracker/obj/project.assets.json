@@ -1854,25 +1854,32 @@
     ]
   },
   "packageFolders": {
-    "/Users/tobyodonoghue/.nuget/packages/": {}
+    "C:\\Users\\enego\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/tobyodonoghue/Documents/GitHub/NWGHack/WaterTracker/WaterTracker/WaterTracker.csproj",
+      "projectUniqueName": "C:\\Users\\enego\\OneDrive\\Documents\\GitHub\\NWGHack\\WaterTracker\\WaterTracker\\WaterTracker.csproj",
       "projectName": "WaterTracker",
-      "projectPath": "/Users/tobyodonoghue/Documents/GitHub/NWGHack/WaterTracker/WaterTracker/WaterTracker.csproj",
-      "packagesPath": "/Users/tobyodonoghue/.nuget/packages/",
-      "outputPath": "/Users/tobyodonoghue/Documents/GitHub/NWGHack/WaterTracker/WaterTracker/obj/",
+      "projectPath": "C:\\Users\\enego\\OneDrive\\Documents\\GitHub\\NWGHack\\WaterTracker\\WaterTracker\\WaterTracker.csproj",
+      "packagesPath": "C:\\Users\\enego\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\enego\\OneDrive\\Documents\\GitHub\\NWGHack\\WaterTracker\\WaterTracker\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/tobyodonoghue/.config/NuGet/NuGet.Config"
+        "C:\\Users\\enego\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid13.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

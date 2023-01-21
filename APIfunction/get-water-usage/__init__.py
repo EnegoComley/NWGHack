@@ -24,6 +24,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
                                       database='nwg')
         cursor = cnx.cursor()
         water_usage = {}
+
+        water_usage["user_id"] = user_id
         query = f"select sum(usage_ml) from water_usage where created_at between CURDATE() and now() and user_id = {user_id} group by user_id"
         cursor.execute(query)
         water_usage["today"] = cursor.fetchall()[0][0]
@@ -48,7 +50,8 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         cursor.execute(query)
         water_usage["last_month"] = cursor.fetchall()[0][0]
 
-        return func.HttpResponse(json.dumps({'user_id':user_id, 'water_usage':water_usage}))
+
+        return func.HttpResponse(json.dumps(water_usage))
     else:
         return func.HttpResponse(
              "This HTTP triggered function executed successfully. Pass a user_id in the query string or in the request body for a personalized response.",

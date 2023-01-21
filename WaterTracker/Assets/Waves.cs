@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Waves : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class Waves : MonoBehaviour
     [SerializeField] private float _speed, _magnitude;
     private RectTransform _rt;
     [SerializeField] private RectTransform _rtWaterUsage, _rtTodaysUsage;
+    [SerializeField] private GameObject goFun;
 
     [SerializeField] private float _minPos, _maxPos;
     [SerializeField] private float _minWaterUsage, _maxWaterUsage;
@@ -34,17 +36,31 @@ public class Waves : MonoBehaviour
             _rtTodaysUsage.position = new Vector3(Screen.width / 2f, Screen.height / 2f + 250f, 0f);
             _rtWaterUsage.gameObject.SetActive(true);
             _rtTodaysUsage.gameObject.SetActive(true);
+            goFun.SetActive(false);
+        }
+        else if (_waterTracker.CurrentTabId == _waterTracker.PastPageId)
+        {
+            _targetY = (-Screen.height / 2f + _minPos) +
+                       Mathf.Sin(Time.time * _speed) * _magnitude;
+
+            _rtWaterUsage.gameObject.SetActive(false);
+            _rtTodaysUsage.gameObject.SetActive(false);
+            goFun.SetActive(false);
         }
         else
         {
             _targetY = (-Screen.height / 2f + _minPos) +
+                       (_maxPos - _minPos) +
                        Mathf.Sin(Time.time * _speed) * _magnitude;
+            
+            goFun.transform.position = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
             
             _rtWaterUsage.gameObject.SetActive(false);
             _rtTodaysUsage.gameObject.SetActive(false);
+            goFun.SetActive(true);
         }
 
-        _rt.transform.position = new Vector3(Screen.width / 2f, _targetY, 0f);
+        _rt.DOMoveY(_targetY, 1f);
     }
 
     private float ClampedPercentage(float min, float max, float val)

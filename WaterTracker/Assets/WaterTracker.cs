@@ -63,6 +63,9 @@ public class WaterTracker : MonoBehaviour
                     break;
             }
         }
+
+        yield return new WaitForSeconds(61f);
+        StartCoroutine(GetRequest("http://20.90.118.142:7071/api/get-water-usage?user_id=1"));
     }
 
     private void Update()
